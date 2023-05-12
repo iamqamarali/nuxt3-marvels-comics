@@ -24,7 +24,7 @@ const fetchcharacters = async () => {
             nameStartsWith : search.value ? search.value.toLowerCase() : undefined,
             orderBy : "-modified",
             limit: 30,
-            offset: (page.value - 1) * 30,
+            offset: page.value * 30,
         }
     })
     if(!data.results.length){
