@@ -2,12 +2,14 @@
 
 const { $debounce } = useNuxtApp();
 const marvelApi = useMarvelApi();
+const router = useRouter()
+const route = useRoute()
 
 
 const allCharacters = useState('allCharacters', () => [])
 const characters = useState('characters', ()=>{})
 
-const search = useState(() => "")
+const search = useState(() => route.query.search || '')
 const page = useState(() => 3)
 const noMorecharacters = useState(() => false)
 
@@ -42,7 +44,7 @@ const fetchcharacters = async () => {
 
 // Watch Search
 // when customer typesomething then filter search results
-watch([search] , $debounce(async (val) => {
+watch(search, $debounce(async (val) => {
     // init values
     noMorecharacters.value = false
     page.value = 1
@@ -50,7 +52,8 @@ watch([search] , $debounce(async (val) => {
 
     // fetch
     await fetchcharacters()
-}, 500))
+    router.push({query: {search: val}})
+}, 200))
 
 
 /**
@@ -62,7 +65,7 @@ const loadMore = $debounce(async () =>{
     noMorecharacters.value = false
     
     await fetchcharacters()
-}, 500)
+}, 200)
 
 
 

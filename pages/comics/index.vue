@@ -2,11 +2,14 @@
 
 
 const { $debounce } = useNuxtApp();
+const router = useRouter()
+const route = useRoute()
+
 
 const marvelApi = useMarvelApi()
 const allComics = useState('allComics', () => [])
 const comics = useState('comics', ()=>{})
-const search = useState(() => "")
+const search = useState(() => route.query.search || '')
 const page = useState(() => 2)
 const limit = useState(() => 20)
 const noMoreComics = useState(() => false)
@@ -52,7 +55,8 @@ watch(search , $debounce(async (val) => {
 
     // fetch
     await fetchComics()
-}, 500))
+    router.push({query: {search: val}})
+}, 200))
 
 
 // when page changes
@@ -61,7 +65,7 @@ const loadMore = $debounce(async () =>{
     noMoreComics.value = false
     
     await fetchComics()
-}, 500)
+}, 200)
 
 
 
