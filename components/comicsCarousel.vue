@@ -43,7 +43,7 @@ const getYear = (title)=>{
             :wrap-around="true"
 
             >
-            <Slide v-for="comic in comics" :key="comic.id">
+            <Slide v-for="(comic, index) in comics" :key="comic">
                 <div class="carousel__item" :id="comic.id" >
                     
                     <div class="custom-container">

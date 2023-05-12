@@ -34,11 +34,11 @@ const fetchBannerComics = async () => {
         cache: false
     })
 
-    return data.value.data
+    return Array.from(data.value.data);
 }
 
-carouselComics.value = await fetchBannerComics()
-sliderComics.value = await fetchBannerComics()
+fetchBannerComics().then((data)=> carouselComics.value = data)
+fetchBannerComics().then( data => sliderComics.value = data)
 
 
 /**

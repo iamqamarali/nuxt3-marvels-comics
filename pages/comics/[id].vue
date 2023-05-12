@@ -23,7 +23,7 @@ onMounted(async () => {
         query:{
             titleStartsWith: comic.value.title.split(' ')[0],
             format : "comic",
-            formatType : "comic",
+            formatType : "comic", 
             noVariants : true,
             limit: 10,
         }

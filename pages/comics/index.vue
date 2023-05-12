@@ -8,7 +8,7 @@ const allComics = useState('allComics', () => [])
 const comics = useState('comics', ()=>{})
 const search = useState(() => "")
 const page = useState(() => 2)
-const limit = useState(() => 30)
+const limit = useState(() => 20)
 const noMoreComics = useState(() => false)
 
 
