@@ -49,10 +49,10 @@ watch(search, $debounce(async (val) => {
     noMorecharacters.value = false
     page.value = 1
     allCharacters.value = []
+    router.push({query: {search: val}})
 
     // fetch
     await fetchcharacters()
-    router.push({query: {search: val}})
 }, 200))
 
 

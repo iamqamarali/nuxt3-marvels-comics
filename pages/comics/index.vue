@@ -53,9 +53,9 @@ watch(search , $debounce(async (val) => {
     page.value = 1
     allComics.value = []
 
+    router.push({query: {search: val}})
     // fetch
     await fetchComics()
-    router.push({query: {search: val}})
 }, 200))
 
 
