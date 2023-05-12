@@ -57,7 +57,7 @@ onMounted(async () => {
                         <div class="col-md">
                             <div class="comic-info">
                                 <div class="comic-info-box">
-                                    <h3 class="info-title comic-title mb-0">{{ comic.title }}</h3>
+                                    <h3 class="comic-title mb-0">{{ comic.title }}</h3>
                                 </div>
                                 <div class="comic-info-box">
                                     <h5 class="info-title mb-0">Published: </h5>

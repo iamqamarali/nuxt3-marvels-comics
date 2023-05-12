@@ -63,14 +63,22 @@
         .comic-info-box{
             margin-bottom: 1.5rem;
         }
-        .info-title{
+        .comic-title{
+            font-size: 1.6rem;
             font-family: var(--roboto-condenced);
             font-weight: 600;
-            letter-spacing: 0.03em;
+        }
+        .info-title{
+            font-size: 1.1rem;
+            font-family: var(--roboto-condenced);
+            font-weight: 600;
+        }
+        .info-text{
+            font-size: 0.95rem;
         }
     }
 
-    .section-heading{
+    .section-heading{ 
         margin-bottom: 2.5em;
         text-transform: uppercase;
     }
@@ -97,7 +105,7 @@
         }
         ul{
             color: var(--secondary-text-color);
-            font-size: .9rem;
+            font-size: .95rem;
             padding: 0;
             margin: 0;
         }
