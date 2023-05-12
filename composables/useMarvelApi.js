@@ -2,7 +2,7 @@
 export default () => {
     const config = useRuntimeConfig()
     let base_url = config.public.api_base_url
-    let api_key = config.public.api_key
+    let api_key = "https://gateway.marvel.com"
 
 
     return {
