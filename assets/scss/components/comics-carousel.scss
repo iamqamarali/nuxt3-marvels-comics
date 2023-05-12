@@ -1,0 +1,119 @@
+.comics-carousel{
+
+    .carousel__pagination{
+        margin-top: 50px;
+    }
+
+    .carousel__prev{
+        display: none;
+    }
+
+    .carousel__next {
+        margin-top: -15px;
+        color: white;
+        width: 80px;
+        height: 80px;
+        padding: 0;
+        border: 0;
+        &:focus,
+        &:active{
+            border: 0;
+        }
+
+        .carousel__icon{
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+
+.comics-carousel{
+    .carousel__slide {
+        background-image: url("/images/characters_art_mas_dsk_01.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .carousel__item{
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+
+    .custom-container{
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        gap: 4.5vw;
+        padding: 30px;
+    }
+
+    .comic-info{
+        color: white;
+        text-align: left;
+        flex: 1;
+    }
+    .comic {
+        margin-bottom: 0;
+        max-width: 450px;
+    }
+
+}
+
+// middle screen
+@media (max-width: 991px) {
+    .comics-carousel{
+        .comic {
+            max-width: 250px;
+        }
+    }
+}
+
+
+
+// extra small screen
+@media (max-width: 575.98px) { 
+    .comics-carousel{
+
+        .carousel__pagination{
+            display: none;
+        }
+
+        .custom-container{
+            display: grid;
+            gap: 0;
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
+
+        .comic-info{
+            grid-row: 1;
+            grid-column: 1;
+            background-color: rgba(0,0,0,.9);
+            margin: 0rem;
+            padding: 2rem 2.7rem;
+            z-index: 1;
+
+            align-self: end;
+        }
+
+        .comic {
+            grid-column: 1;
+            grid-row: 1;
+            justify-self: center;
+
+            max-width: 350px;
+            width: auto;
+            padding: 40px 0;
+
+            .comic-image{
+                // max-height: 300px;
+                // object-fit: cover;
+            }
+        }
+    }
+}
+

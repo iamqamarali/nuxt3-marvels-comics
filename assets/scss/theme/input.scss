@@ -1,0 +1,15 @@
+input.form-control{
+    font-size: .9rem;
+    border: 0;
+    border-bottom: 2px solid var(--bs-dark);
+    padding: 0.85rem 0.3rem;
+    border-radius: 0;
+    min-width: 200px;
+
+
+    &:focus{
+        box-shadow: none;
+        border-color: var(--primary);
+    }
+}
+

@@ -1,0 +1,45 @@
+.site-header{
+
+}
+
+.site-header-top{
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 0px;
+    border-bottom: 1px solid #383838;
+
+    .logo-img{
+        width: 120px;
+    }
+
+}
+
+.site-header-bottom{
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 5px 0;
+    font-family: var(--roboto-condenced);
+
+    .custom-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-link{
+        color: var(--header-text-color);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: .85rem;
+        font-weight: 600;
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .router-link-exact-active{
+        opacity: 1;
+    }
+
+}

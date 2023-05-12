@@ -1,0 +1,108 @@
+.single-character-page{
+    .details-section{
+        background-color: var(--secondary);
+        padding: 2rem;
+        position: relative;
+        z-index: -2;
+
+        .custom-container{
+            display: flex;
+            gap: calc(2rem + 5vw)
+        }
+        .character-image{
+
+        }
+        .details-wrapper{
+            flex-grow: 1;
+            align-self: center;            
+            font-family: var(--roboto-condenced);
+            color: white;
+        }
+        .character-name{
+            font-size: calc(3rem + 2.3vw);
+            font-weight: 800;
+        }
+    }
+
+    // smaller than medium screen
+    @media (max-width: 991px) {
+        .details-section{
+            .custom-container{
+                gap: 2rem;
+            }
+            .character-name{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    @media (max-width:  767px) {
+        .details-section{
+            .custom-container{
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
+            .character-image{
+                width: clamp(200px, 100%, 370px);
+                max-height: 420px;
+                object-fit: cover;
+                object-position: top;
+            }
+            .details-wrapper{
+                margin: 3rem 0 ;
+            }
+            .character-name{
+                font-size: 2rem;
+            }
+        }
+    }
+
+
+
+
+    // more info section
+    .more-info-section{        
+        padding: calc(1.4rem + 3vw) 0 calc(1.4rem + 1vw);
+        background-color: white;
+        transform: skewY(-1deg);
+        position: relative;
+        z-index: -1;
+        margin-top: -1rem;
+
+        .custom-container{
+            transform: skewY(1.5deg);
+            display: grid;
+            align-items: start;
+            grid-template-columns: auto 1fr;
+            gap: 0 calc(3rem + 2vw);    
+        }
+
+        .info-title{
+            font-family: var(--roboto-condensed);
+            text-transform: uppercase;
+            font-weight: 500;
+            border-top: 1px solid var(--gray-border-color);
+            padding-top: 1.4rem;
+            padding-right: 3rem;
+            padding-left: .3rem;
+            margin-bottom: 1.5rem;
+        }
+        .info-content {
+            font-size: .95rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+
+    // smaller than medium
+    @media (max-width: 991px) {
+        .more-info-section{
+            .custom-container{
+                grid-template-columns: 1fr;
+                padding-top: 2rem;
+            }
+        }
+    }
+
+
+}

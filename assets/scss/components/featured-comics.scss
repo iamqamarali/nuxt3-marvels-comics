@@ -1,0 +1,44 @@
+.featured-comics{
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.featured-comics{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0px auto;
+
+    overflow-x: auto;
+
+
+    perspective: 400px;
+
+    .featured-comic{
+        cursor: pointer;
+
+        width: 100px;
+        transform: rotateY(15deg);
+        transform-origin: left;      
+        
+        transition: width 300ms, transform 300ms;
+        &:hover{
+            width: 250px;
+            transform: rotateY(0);
+        }
+    }
+
+    .comic-image-wrapper{
+        width: 250px;
+        transform: none;
+
+        .comic-image{
+            display: block;
+            width: 100%;
+        }
+
+    }
+
+}

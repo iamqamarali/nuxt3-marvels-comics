@@ -1,0 +1,119 @@
+.single-comic-page{
+    
+    .comic-details-section{
+        position: relative
+    }
+    .comic-details-background-wrapper{
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        overflow: hidden;
+
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        img{
+            width: 110%;
+            height: 110%;
+            margin-top: -5%;
+            margin-left: -5%;
+            object-fit: cover;
+            object-position: top;
+            filter: blur(1rem);    
+        }
+    }
+
+    // Section: comic info 
+    .comic-info-wrapper{
+        padding: calc(3rem + 2vw) 0 ;
+        .main-row{
+            gap: calc(.4rem + 2.5vw);
+        }
+    }
+    .comic-image-column{
+        max-width: 380px;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    @media (max-width: 991px) {
+        .comic-image-column{
+            max-width: 280px;
+        }
+    }
+    @media (max-width: 767px) {
+        .comic-image-column{
+            max-width: 380px;
+        }
+        .comic-info{
+            .comic-title{
+                margin-top: 1.5em;
+            }
+        }
+    } 
+
+    .comic-info{
+        color: white;
+        .comic-info-box{
+            margin-bottom: 1.5rem;
+        }
+        .info-title{
+            font-family: var(--roboto-condenced);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+    }
+
+    .section-heading{
+        margin-bottom: 2.5em;
+        text-transform: uppercase;
+    }
+
+
+    // Secion: More details about COMIC
+
+    .more-details-section{
+        background-color: var(--dark-gray);
+        padding: calc(1.4rem + 3vw) 0 1.5rem;
+        color: var(--bs-light)
+    }
+
+
+    .more-details-inner-column{
+        margin-bottom: 3.5rem;
+
+        .heading{
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            font-family: var(--roboto-condenced);
+            letter-spacing: 0.05rem;
+        }
+        ul{
+            color: var(--secondary-text-color);
+            font-size: .9rem;
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style-type: none;
+            margin: 0;
+            line-height: 1.3rem;
+        }
+    }
+
+
+    // Section: More Comics
+    .more-comics-section{
+        padding: calc(1.4rem + 3vw) 0;
+        background-color: white;
+    }
+
+
+}

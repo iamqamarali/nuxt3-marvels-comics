@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;600;800&display=swap');
+
+:root{
+
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --primary-text-color: #fff;
+    --secondary-text-color: gainsboro;
+    --gray-border-color: #767676;
+    
+    --dark-gray: #{$dark-gray};
+    --black-bg: #060606;
+
+    --body-text-color: #{$body-color};
+    // colors for partials
+    --header-bg-color: #{$dark-gray};
+    --header-text-color: #fff;
+    --footer-bg-color: #{$dark-gray};
+    --footer-text-color: var(--primary-text-color);
+
+    --roboto-condenced: 'Roboto Condensed', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+
+    --extra-large: 1399px;
+    --large : 1199px;
+    --medium : 991px;
+    --small : 767px;
+    --extra-small : 575.98px
+
+    font-size: 16px;
+
+}
+
+
+body{
+    font-family: var(--roboto);
+    color: var(--body-text-color);
+}
+
+.roboto-condensed{
+    font-family: var(--roboto-condenced);
+    letter-spacing: 0.03em;
+}
+
+
+.custom-container{
+    max-width: 1250px;
+    margin: 0 auto;    
+    padding: 0 30px;
+}
+.img-fluid{
+    display: block;
+}
+
+
+// small screen
+@media (max-width: 767px) {
+    .custom-container{
+        padding: 0 20px;
+    }
+}
