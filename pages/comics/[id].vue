@@ -104,7 +104,7 @@ onMounted(async () => {
         <!--  More Details -->
         <section class="more-details-section">
             <div class="custom-container">
-                <h4 class="roboto-condensed fw-semibold section-heading">More Details</h4>
+                <h4 class="roboto-condensed fw-semibold section-heading pb-2">More Details</h4>
                 
                 <div class="row ">
                     <div class="col-md-4 more-details-inner-column">

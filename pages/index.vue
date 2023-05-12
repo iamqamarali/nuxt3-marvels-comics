@@ -122,8 +122,8 @@ let chooseFrom = [
         </section>
 
         <!-- New Releases -->
-        <section class="my-5 custom-container ">
-            <header class=" mb-5">
+        <section class="my-4 my-sm-5 custom-container ">
+            <header class=" mb-4 mb-md-5 pb-2 pb-md-0 ">
                 <h3 class="roboto-condensed fw-semibold text-primary-gradient">THIS WEEKS - NEW RELEASES</h3>
             </header>
 
@@ -137,8 +137,8 @@ let chooseFrom = [
 
 
         <!-- fEATURED COMICS -->
-        <section class="my-5 custom-container ">
-            <header class=" mb-5">
+        <section class="my-4 my-sm-5 custom-container ">
+            <header class=" mb-4 mb-md-5 pb-2 pb-md-0">
                 <h3 class="roboto-condensed fw-semibold text-primary-gradient">FEATURED COMICS</h3>
             </header>
 
