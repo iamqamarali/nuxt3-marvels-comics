@@ -10,7 +10,7 @@ const allCharacters = useState('allCharacters', () => [])
 const characters = useState('characters', ()=>{})
 
 const search = useState(() => route.query.search || '')
-const page = useState(() => 3)
+const page = useState(() => 1)
 const noMorecharacters = useState(() => false)
 
 
@@ -24,7 +24,7 @@ const fetchcharacters = async () => {
             nameStartsWith : search.value ? search.value.toLowerCase() : undefined,
             orderBy : "-modified",
             limit: 30,
-            offset: page.value * 30,
+            offset: (page.value-1) * 30,
         }
     })
     if(!data.results.length){
