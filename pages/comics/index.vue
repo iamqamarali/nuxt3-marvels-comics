@@ -76,8 +76,7 @@ onMounted(async () => {
     //await fetchComics()
     let {comics} = await fetchComics()
 
-    console.log(comics);
-
+    //console.log(comics);
 })
 
 
