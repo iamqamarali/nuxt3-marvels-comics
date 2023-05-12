@@ -45,7 +45,10 @@ export default () => {
          * 
          */
         getThumbnail(thumbnail){
-            return thumbnail.path.concat('/portrait_uncanny', '.', thumbnail.extension)
+            let url = thumbnail.path.concat('/portrait_uncanny', '.', thumbnail.extension)
+            // remove http and add https
+            url = url.replace('http://', 'https://')
+            return url;
         },
 
 

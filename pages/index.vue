@@ -41,14 +41,8 @@ fetchBannerComics().then((data)=> carouselComics.value = data)
 fetchBannerComics().then( data => sliderComics.value = data)
 
 
-/**
- * 
- * init page
- */
 
-onMounted(async function(){    
-    fetchfeatureCharacters();   
-
+const fetchbestSellingComics = async () =>{
     const {data} = await marvelApi.getComics({
         query:{
             formatType : "comic",
@@ -62,6 +56,19 @@ onMounted(async function(){
 
     data.results = marvelApi.removeWithoutImages(data.results)
     bestSellingComics.value = data.results
+
+}
+
+
+
+/**
+ * 
+ * init page
+ */
+
+onMounted(async function(){    
+    fetchfeatureCharacters();   
+    fetchbestSellingComics();
 })
 
 
