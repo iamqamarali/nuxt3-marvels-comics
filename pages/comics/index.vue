@@ -52,6 +52,7 @@ watch(search , $debounce(async (val) => {
     noMoreComics.value = false
     page.value = 1
     allComics.value = []
+    
 
     router.push({query: {search: val}})
     // fetch
